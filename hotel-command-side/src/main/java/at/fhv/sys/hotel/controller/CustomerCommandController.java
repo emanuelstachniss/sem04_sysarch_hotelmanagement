@@ -4,6 +4,7 @@ import at.fhv.sys.hotel.commands.CreateCustomerCommand;
 import at.fhv.sys.hotel.commands.CustomerAggregate;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 @Path("/api")
 @Produces(MediaType.APPLICATION_JSON)
@@ -15,6 +16,12 @@ public class CustomerCommandController {
     public CustomerCommandController(CustomerAggregate customerAggregate) {
         this.customerAggregate = customerAggregate;
     }
+
+//    @GET
+//    @Path("/getCustomer")
+//    public String getCustomer(@QueryParam("customerId") String customerId) {
+//        return customerAggregate.
+//    }
 
     @POST
     @Path("/createCustomer")

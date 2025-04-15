@@ -19,6 +19,10 @@ public class CustomerProjection {
     @Inject
     CustomerServicePanache customerServicePanache;
 
+    public CustomerQueryModel getCustomerById(String customerId) {
+        return customerService.findById(customerId);
+    }
+
     public void processCustomerCreatedEvent(CustomerCreated customerCreatedEvent) {
         Logger.getAnonymousLogger().info("Processing event: " + customerCreatedEvent);
         customerService.createCustomer(new CustomerQueryModel(customerCreatedEvent.getUserId(), customerCreatedEvent.getEmail()));

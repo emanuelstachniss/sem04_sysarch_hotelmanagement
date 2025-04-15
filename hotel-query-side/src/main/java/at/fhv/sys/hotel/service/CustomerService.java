@@ -19,6 +19,10 @@ public class CustomerService {
         return entityManager.createQuery("SELECT c FROM CustomerQueryModel c", CustomerQueryModel.class).getResultList();
     }
 
+    public CustomerQueryModel findById(String customerId) {
+        return entityManager.find(CustomerQueryModel.class, customerId);
+    }
+
     @Transactional
     public void createCustomer(CustomerQueryModel customer) {
         entityManager.persist(customer);
