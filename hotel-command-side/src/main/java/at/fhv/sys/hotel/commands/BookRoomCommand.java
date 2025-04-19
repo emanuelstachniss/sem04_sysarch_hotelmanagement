@@ -1,4 +1,4 @@
 package at.fhv.sys.hotel.commands;
 
-public class BookRoomCommand {
+public record BookRoomCommand(String startTime, String endTime, int roomNumber, int customerId) {
 }
