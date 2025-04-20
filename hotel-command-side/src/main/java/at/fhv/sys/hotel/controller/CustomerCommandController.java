@@ -17,12 +17,6 @@ public class CustomerCommandController {
         this.customerAggregate = customerAggregate;
     }
 
-//    @GET
-//    @Path("/getCustomer")
-//    public String getCustomer(@QueryParam("customerId") String customerId) {
-//        return customerAggregate.
-//    }
-
     @POST
     @Path("/createCustomer")
     public String createCustomer(@QueryParam("customerId") String customerId, @QueryParam("name") String name, @QueryParam("email") String email) {
