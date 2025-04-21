@@ -19,8 +19,8 @@ public class RoomCommandController {
     }
 
     @POST
-    @Path("/createRoom")
-    public int createRoom(@QueryParam("startTime") String startTime, @QueryParam("endTime") String endTime, @QueryParam("roomNumber") int roomNumber, @QueryParam("customerId") int customerId){
+    @Path("/bookRoom")
+    public int bookRoom(@QueryParam("startTime") String startTime, @QueryParam("endTime") String endTime, @QueryParam("roomNumber") int roomNumber, @QueryParam("customerId") int customerId){
         return roomAggregate.handle(new BookRoomCommand(startTime, endTime, roomNumber, customerId));
     }
 }

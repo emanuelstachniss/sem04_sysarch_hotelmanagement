@@ -1,35 +1,43 @@
 package at.fhv.sys.hotel.commands.shared.events;
 
+import java.time.LocalDate;
+import java.util.UUID;
+
 public class CustomerCreated {
 
-    private String userId;
-    private String email;
+    private UUID customerId;
+    private String firstName;
+    private String lastName;
+    private String address;
+    private LocalDate birthday;
 
     public CustomerCreated() {}
 
-    public CustomerCreated(String userId, String email) {
-        this.userId = userId;
-        this.email = email;
+    public CustomerCreated(UUID customerId, String firstName, String lastName, String address, LocalDate birthday) {
+        this.customerId = customerId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.birthday = birthday;
     }
 
-    public String getUserId() {
-        return userId;
+    public UUID getCustomerId() {
+        return customerId;
     }
 
-    public String getEmail() {
-        return email;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getAddress() {
+        return address;
     }
 
-    @Override
-    public String toString() {
-        return "CustomerCreated{" + "userId='" + userId + '\'' + ", email='" + email + '\'' + '}';
+    public LocalDate getBirthday() {
+        return birthday;
     }
 }

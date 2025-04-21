@@ -1,15 +1,15 @@
 package at.fhv.sys.eventbus.domain;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity
-public class EventEntity extends PanacheEntity {
+public class EventEntity extends PanacheEntityBase {
 
-    //Panache makes id
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long eventId;
     private String stream;
     private String type;
     @Lob

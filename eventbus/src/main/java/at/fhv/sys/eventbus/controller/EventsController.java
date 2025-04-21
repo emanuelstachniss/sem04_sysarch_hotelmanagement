@@ -1,7 +1,7 @@
 package at.fhv.sys.eventbus.controller;
 
 import at.fhv.sys.eventbus.services.EventProcessingService;
-import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
+import at.fhv.sys.hotel.commands.shared.events.*;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -20,7 +20,15 @@ public class EventsController {
     @Path("/customerCreated")
     public Response customerCreated(CustomerCreated event) {
         Logger.getAnonymousLogger().info("Received event: " + event);
-        eventStoreService.processEvent("customer-" + event.getUserId(), event);
+        eventStoreService.processEvent("customer-" + event.getCustomerId(), event);
+        return Response.ok(event).build();
+    }
+
+    @POST
+    @Path("/roomBooked")
+    public Response customerCreated(RoomBooked event) {
+        Logger.getAnonymousLogger().info("Received event: " + event);
+        eventStoreService.processEvent("room-" + event.getRoomNumber() , event);
         return Response.ok(event).build();
     }
 }

@@ -18,6 +18,9 @@ public class RoomAggregate {
     public int handle(BookRoomCommand command) {
         RoomBooked event = new RoomBooked(command.startTime(), command.endTime(), command.roomNumber(), command.customerId());
 
+        //validaten
+        //in memory saven
+
         Logger.getAnonymousLogger().info(eventClient.processRoomBookedEvent(event).toString());
 
         return command.roomNumber();

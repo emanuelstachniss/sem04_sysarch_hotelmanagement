@@ -16,11 +16,14 @@ public class CustomerService {
     EntityManager entityManager;
 
     public List<CustomerQueryModel> getAllCustomers() {
-        return entityManager.createQuery("SELECT c FROM CustomerQueryModel c", CustomerQueryModel.class).getResultList();
+        return entityManager.createQuery("SELECT c FROM CustomerQueryModel c", CustomerQueryModel.class)
+                .getResultList();
     }
 
-    public CustomerQueryModel findById(String customerId) {
-        return entityManager.find(CustomerQueryModel.class, customerId);
+    public List<CustomerQueryModel> getCustomersByLastName(String lastName) {
+        return entityManager.createQuery("SELECT c FROM CustomerQueryModel c WHERE LOWER(c.lastName) LIKE :lastName", CustomerQueryModel.class)
+                .setParameter("lastName", "%" + lastName.toLowerCase() + "%")
+                .getResultList();
     }
 
     @Transactional
