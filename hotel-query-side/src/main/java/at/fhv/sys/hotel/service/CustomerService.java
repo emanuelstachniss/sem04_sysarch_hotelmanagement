@@ -8,6 +8,7 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 
 import java.util.List;
+import java.util.UUID;
 
 @ApplicationScoped
 public class CustomerService {
@@ -24,6 +25,10 @@ public class CustomerService {
         return entityManager.createQuery("SELECT c FROM CustomerQueryModel c WHERE LOWER(c.lastName) LIKE :lastName", CustomerQueryModel.class)
                 .setParameter("lastName", "%" + lastName.toLowerCase() + "%")
                 .getResultList();
+    }
+
+    public CustomerQueryModel getCustomerById(UUID customerId) {
+        return entityManager.find(CustomerQueryModel.class, customerId);
     }
 
     @Transactional

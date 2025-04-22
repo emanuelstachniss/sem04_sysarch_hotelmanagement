@@ -32,4 +32,12 @@ public class CustomerQueryModel {
     public CustomerDTO toDTO() {
         return new CustomerDTO(this.firstName, this.lastName, this.address, this.birthday);
     }
+
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    public String getLastName(){
+        return this.lastName;
+    }
 }

@@ -1,15 +1,18 @@
 package at.fhv.sys.hotel.domain;
 
-import java.time.LocalDate;
-import java.util.UUID;
-
 public class Room {
     private Integer roomNumber;
     private Integer capacity;
+    private Double price;
+    private Boolean hasBalcony;
+    private String description;
 
-    private Room (Builder builder) {
+    private Room(Builder builder) {
         this.roomNumber = builder.roomNumber;
         this.capacity = builder.capacity;
+        this.price = builder.price;
+        this.hasBalcony = builder.hasBalcony;
+        this.description = builder.description;
     }
 
     public int getRoomNumber() {
@@ -20,21 +23,51 @@ public class Room {
         return capacity;
     }
 
-    public static Room.Builder builder() {
-        return new Room.Builder();
+    public double getPrice() {
+        return price;
+    }
+
+    public boolean hasBalcony() {
+        return hasBalcony;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public static Builder builder() {
+        return new Builder();
     }
 
     public static class Builder {
         private Integer roomNumber;
         private Integer capacity;
+        private Double price;
+        private Boolean hasBalcony;
+        private String description;
 
-        public Room.Builder roomNumber(int roomNumber) {
+        public Builder roomNumber(int roomNumber) {
             this.roomNumber = roomNumber;
             return this;
         }
 
-        public Room.Builder capacity(int capacity) {
+        public Builder capacity(int capacity) {
             this.capacity = capacity;
+            return this;
+        }
+
+        public Builder price(double price) {
+            this.price = price;
+            return this;
+        }
+
+        public Builder hasBalcony(boolean hasBalcony) {
+            this.hasBalcony = hasBalcony;
+            return this;
+        }
+
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 
@@ -44,8 +77,9 @@ public class Room {
         }
 
         private void validate() {
-            if (roomNumber == null || capacity == null) throw new IllegalArgumentException();
+            if (roomNumber == null || capacity == null || price == null || hasBalcony == null || description == null) {
+                throw new IllegalArgumentException("Room has invalid or missing values.");
+            }
         }
-
     }
 }

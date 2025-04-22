@@ -1,7 +1,6 @@
 package at.fhv.sys.hotel.commands;
 
-import at.fhv.sys.hotel.domain.Customer;
-import at.fhv.sys.hotel.persistence.CustomerRepository;
+import java.time.LocalDate;
 
 public record BookRoomCommand(
         String startTime,

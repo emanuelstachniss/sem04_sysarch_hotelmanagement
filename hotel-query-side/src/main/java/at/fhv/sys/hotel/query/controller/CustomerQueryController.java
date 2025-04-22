@@ -1,6 +1,7 @@
 package at.fhv.sys.hotel.query.controller;
 
 import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
+import at.fhv.sys.hotel.dto.BookingDTO;
 import at.fhv.sys.hotel.dto.CustomerDTO;
 import at.fhv.sys.hotel.models.CustomerQueryModel;
 import at.fhv.sys.hotel.projection.CustomerProjection;

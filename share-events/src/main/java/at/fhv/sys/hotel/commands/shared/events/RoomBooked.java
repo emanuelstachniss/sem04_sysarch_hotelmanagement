@@ -1,38 +1,46 @@
 package at.fhv.sys.hotel.commands.shared.events;
 
-public class RoomBooked {
+import java.time.LocalDate;
+import java.util.UUID;
 
-    private String startTime;
-    private String endTime;
+public class RoomBooked {
+    private UUID customerId;
+    private LocalDate startTime;
+    private LocalDate endTime;
     private int roomNumber;
     private int capacity;
-    private String lastname;
-    private String firstname;
 
     public RoomBooked() {}
 
-    public RoomBooked(String startTime, String endTime, int roomNumber, int capacity, String lastname, String firstname) {
+    public RoomBooked(UUID customerId, LocalDate startTime, LocalDate endTime, int roomNumber, int capacity) {
+        this.customerId = customerId;
         this.startTime = startTime;
         this.endTime = endTime;
         this.roomNumber = roomNumber;
         this.capacity = capacity;
-        this.lastname = lastname;
-        this.firstname = firstname;
     }
 
-    public String getStartTime() {
+    public UUID getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(UUID customerId) {
+        this.customerId = customerId;
+    }
+
+    public LocalDate getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(LocalDate startTime) {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public LocalDate getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(LocalDate endTime) {
         this.endTime = endTime;
     }
 
@@ -52,31 +60,15 @@ public class RoomBooked {
         this.capacity = capacity;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
 
     @Override
     public String toString() {
         return "RoomBooked{" +
-                "startTime='" + startTime + '\'' +
-                ", endTime='" + endTime + '\'' +
+                "customerId=" + customerId +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
                 ", roomNumber=" + roomNumber +
-                ", lastname='" + lastname + '\'' +
-                ", firstname='" + firstname + '\'' +
+                ", capacity=" + capacity +
                 '}';
     }
-
 }
