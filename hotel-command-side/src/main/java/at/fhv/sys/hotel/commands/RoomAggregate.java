@@ -35,6 +35,7 @@ public class RoomAggregate {
                     command.startTime(),
                     command.endTime(),
                     command.roomNumber(),
+                    command.capacity(),
                     command.lastname(),
                     command.firstname()
             );
