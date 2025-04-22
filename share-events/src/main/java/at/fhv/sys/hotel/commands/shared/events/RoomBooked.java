@@ -5,15 +5,19 @@ public class RoomBooked {
     private String startTime;
     private String endTime;
     private int roomNumber;
-    private int customerId;
+    private int capacity;
+    private String lastname;
+    private String firstname;
 
     public RoomBooked() {}
 
-    public RoomBooked(String startTime, String endTime, int roomNumber, int customerId) {
+    public RoomBooked(String startTime, String endTime, int roomNumber, int capacity, String lastname, String firstname) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.roomNumber = roomNumber;
-        this.customerId = customerId;
+        this.capacity = capacity;
+        this.lastname = lastname;
+        this.firstname = firstname;
     }
 
     public String getStartTime() {
@@ -40,12 +44,28 @@ public class RoomBooked {
         this.roomNumber = roomNumber;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public int getCapacity() {
+        return capacity;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     @Override
@@ -54,7 +74,8 @@ public class RoomBooked {
                 "startTime='" + startTime + '\'' +
                 ", endTime='" + endTime + '\'' +
                 ", roomNumber=" + roomNumber +
-                ", customerId=" + customerId +
+                ", lastname='" + lastname + '\'' +
+                ", firstname='" + firstname + '\'' +
                 '}';
     }
 

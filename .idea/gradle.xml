@@ -5,7 +5,7 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/eventbus" />
-        <option name="gradleJvm" value="22" />
+        <option name="gradleJvm" value="corretto-22" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/eventbus" />
@@ -15,7 +15,7 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/hotel-command-side" />
-        <option name="gradleJvm" value="22" />
+        <option name="gradleJvm" value="corretto-22" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/hotel-command-side" />
@@ -25,7 +25,7 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/hotel-query-side" />
-        <option name="gradleJvm" value="22" />
+        <option name="gradleJvm" value="corretto-22" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/hotel-query-side" />
@@ -35,7 +35,7 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/share-events" />
-        <option name="gradleJvm" value="22" />
+        <option name="gradleJvm" value="corretto-22" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/share-events" />
