@@ -31,4 +31,12 @@ public class EventsController {
         eventStoreService.processEvent("room-" + event.getRoomNumber() , event);
         return Response.ok(event).build();
     }
+
+    @POST
+    @Path("/roomCreated")
+    public Response roomCreated(RoomCreated event) {
+        Logger.getAnonymousLogger().info("Received event: " + event);
+        eventStoreService.processEvent("room-" + event.getRoomNumber() , event);
+        return Response.ok(event).build();
+    }
 }

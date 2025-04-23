@@ -1,6 +1,9 @@
 package at.fhv.sys.hotel.domain;
 
+import java.util.UUID;
+
 public class Room {
+    private UUID roomId;
     private Integer roomNumber;
     private Integer capacity;
     private Double price;
@@ -8,11 +11,16 @@ public class Room {
     private String description;
 
     private Room(Builder builder) {
+        this.roomId = builder.roomId;
         this.roomNumber = builder.roomNumber;
         this.capacity = builder.capacity;
         this.price = builder.price;
         this.hasBalcony = builder.hasBalcony;
         this.description = builder.description;
+    }
+
+    public UUID getRoomId() {
+        return roomId;
     }
 
     public int getRoomNumber() {
@@ -40,11 +48,13 @@ public class Room {
     }
 
     public static class Builder {
+        private UUID roomId = UUID.randomUUID();
         private Integer roomNumber;
         private Integer capacity;
         private Double price;
         private Boolean hasBalcony;
         private String description;
+
 
         public Builder roomNumber(int roomNumber) {
             this.roomNumber = roomNumber;

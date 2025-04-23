@@ -4,6 +4,7 @@ import at.fhv.sys.eventbus.client.QueryClient;
 import at.fhv.sys.eventbus.domain.EventEntity;
 import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
 import at.fhv.sys.hotel.commands.shared.events.RoomBooked;
+import at.fhv.sys.hotel.commands.shared.events.RoomCreated;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
@@ -35,7 +36,8 @@ public class EventProcessingService {
             queryClient.forwardCustomerCreatedEvent((CustomerCreated) eventObject);
         } else if (eventObject instanceof RoomBooked) {
             queryClient.forwardRoomBookedEvent((RoomBooked) eventObject);
-            System.out.println("Test");
+        } else if (eventObject instanceof RoomCreated) {
+            queryClient.forwardRoomCreatedEvent((RoomCreated) eventObject);
         } else {
             System.out.println("Unsupported event type: " + eventObject.getClass().getName());
         }
