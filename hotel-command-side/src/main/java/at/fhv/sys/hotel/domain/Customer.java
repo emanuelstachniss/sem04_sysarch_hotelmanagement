@@ -43,6 +43,15 @@ public class Customer {
         return new Builder();
     }
 
+    public static Builder from(Customer existing) {
+        Builder builder = new Builder();
+        builder.customerId = existing.getCustomerId();
+        builder.firstName = existing.getFirstName();
+        builder.lastName = existing.getLastName();
+        builder.address = existing.getAddress();
+        builder.birthday = existing.getBirthday();
+        return builder;
+    }
 
     public static class Builder {
         private UUID customerId = UUID.randomUUID();
@@ -50,6 +59,12 @@ public class Customer {
         private String lastName;
         private String address;
         private LocalDate birthday;
+
+
+        public Builder customerId(UUID id) {
+            this.customerId = id;
+            return this;
+        }
 
         public Builder firstName(String firstName) {
             this.firstName = firstName;

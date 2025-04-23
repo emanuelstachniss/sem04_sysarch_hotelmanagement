@@ -25,6 +25,14 @@ public class EventsController {
     }
 
     @POST
+    @Path("/customerUpdated")
+    public Response customerUpdated(CustomerUpdated event) {
+        Logger.getAnonymousLogger().info("Received event: " + event);
+        eventStoreService.processEvent("customer-" + event.getCustomerId(), event);
+        return Response.ok(event).build();
+    }
+
+    @POST
     @Path("/roomBooked")
     public Response roomBooked(RoomBooked event) {
         Logger.getAnonymousLogger().info("Received event: " + event);

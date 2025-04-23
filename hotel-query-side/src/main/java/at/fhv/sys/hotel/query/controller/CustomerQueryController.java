@@ -1,6 +1,7 @@
 package at.fhv.sys.hotel.query.controller;
 
 import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
+import at.fhv.sys.hotel.commands.shared.events.CustomerUpdated;
 import at.fhv.sys.hotel.dto.BookingDTO;
 import at.fhv.sys.hotel.dto.CustomerDTO;
 import at.fhv.sys.hotel.models.CustomerQueryModel;
@@ -49,6 +50,14 @@ public class CustomerQueryController {
     public Response customerCreated(CustomerCreated event) {
         Logger.getAnonymousLogger().info("Received event: " + event);
         customerProjection.processCustomerCreatedEvent(event);
+        return Response.ok(event).build();
+    }
+
+    @POST
+    @Path("/customerUpdated")
+    public Response customerUpdated(CustomerUpdated event) {
+        Logger.getAnonymousLogger().info("Received event: " + event);
+        customerProjection.processCustomerUpdatedEvent(event);
         return Response.ok(event).build();
     }
 }

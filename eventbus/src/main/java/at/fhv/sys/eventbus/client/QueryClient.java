@@ -15,6 +15,11 @@ public interface QueryClient {
     void forwardCustomerCreatedEvent(CustomerCreated event);
 
     @POST
+    @Path("/customerUpdated")
+    @Consumes(MediaType.APPLICATION_JSON)
+    void forwardCustomerUpdatedEvent(CustomerUpdated event);
+
+    @POST
     @Path("/roomBooked")
     @Consumes(MediaType.APPLICATION_JSON)
     void forwardRoomBookedEvent(RoomBooked event);
