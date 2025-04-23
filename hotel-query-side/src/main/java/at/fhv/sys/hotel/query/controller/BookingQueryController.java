@@ -1,5 +1,6 @@
 package at.fhv.sys.hotel.query.controller;
 
+import at.fhv.sys.hotel.commands.shared.events.BookingCancelled;
 import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
 import at.fhv.sys.hotel.commands.shared.events.RoomBooked;
 import at.fhv.sys.hotel.dto.BookingDTO;
@@ -57,5 +58,14 @@ public class BookingQueryController {
         bookingProjection.processRoomBookedEvent(event);
         return Response.ok(event).build();
     }
+
+    @POST
+    @Path("/bookingCancelled")
+    public Response bookingCancelled(BookingCancelled event) {
+        Logger.getAnonymousLogger().info("Received cancellation event: " + event);
+        bookingProjection.processBookingCancelledEvent(event);
+        return Response.ok().build();
+    }
+
 }
 

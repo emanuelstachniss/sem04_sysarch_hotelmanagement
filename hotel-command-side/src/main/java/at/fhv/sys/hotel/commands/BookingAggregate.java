@@ -1,6 +1,7 @@
 package at.fhv.sys.hotel.commands;
 
 import at.fhv.sys.hotel.client.EventBusClient;
+import at.fhv.sys.hotel.commands.shared.events.BookingCancelled;
 import at.fhv.sys.hotel.commands.shared.events.RoomBooked;
 import at.fhv.sys.hotel.domain.Booking;
 import at.fhv.sys.hotel.domain.Customer;
@@ -65,6 +66,28 @@ public class BookingAggregate {
         } catch (IllegalArgumentException e) {
             Logger.getAnonymousLogger().warning("Booking failed: " + e.getMessage());
             return "Booking failed: " + e.getMessage();
+        }
+    }
+
+    public String cancel(CancelBookingCommand command) {
+        try {
+            Booking booking = bookingRepository.findById(command.bookingId());
+            if (booking == null) {
+                return "Booking not found";
+            }
+
+            bookingRepository.remove(command.bookingId());
+
+            BookingCancelled event = new BookingCancelled(command.bookingId());
+
+            Logger.getAnonymousLogger().info("Sending BookingCancelled event...");
+            Logger.getAnonymousLogger().info(eventClient.processBookingCancelledEvent(event).toString());
+
+            return "Booking cancelled successfully";
+
+        } catch (Exception e) {
+            Logger.getAnonymousLogger().warning("Cancellation failed: " + e.getMessage());
+            return "Cancellation failed: " + e.getMessage();
         }
     }
 }

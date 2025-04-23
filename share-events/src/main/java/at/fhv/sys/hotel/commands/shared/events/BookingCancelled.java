@@ -1,14 +1,7 @@
 package at.fhv.sys.hotel.commands.shared.events;
 
-public class BookingCancelled {
+import java.util.UUID;
 
-    private Long bookingId;
-
-    public BookingCancelled(Long bookingId) {
-        this.bookingId = bookingId;
-    }
-
-    public Long getBookingId() {
-        return bookingId;
-    }
-}
+public record BookingCancelled(
+        UUID bookingId
+) {}

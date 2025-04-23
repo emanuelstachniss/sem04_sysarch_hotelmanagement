@@ -6,6 +6,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @ApplicationScoped
 public class BookingRepository {
@@ -15,5 +16,17 @@ public class BookingRepository {
     public void save(Booking booking) {
         bookings.add(booking);
     }
+
+    public Booking findById(UUID id) {
+        return bookings.stream()
+                .filter(b -> b.getBookingId().equals(id))
+                .findFirst()
+                .orElse(null);
     }
+
+    public void remove(UUID id) {
+        bookings.removeIf(b -> b.getBookingId().equals(id));
+    }
+
+}
 

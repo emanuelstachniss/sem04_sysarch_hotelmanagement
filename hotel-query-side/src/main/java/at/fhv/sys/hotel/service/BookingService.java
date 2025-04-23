@@ -8,6 +8,7 @@ import jakarta.transaction.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 @ApplicationScoped
 public class BookingService {
@@ -29,4 +30,14 @@ public class BookingService {
     public void createBooking(BookingQueryModel booking) {
         entityManager.persist(booking);
     }
+
+
+    @Transactional
+    public void deleteBooking(UUID bookingId) {
+        BookingQueryModel booking = entityManager.find(BookingQueryModel.class, bookingId);
+        if (booking != null) {
+            entityManager.remove(booking);
+        }
+    }
+
 }

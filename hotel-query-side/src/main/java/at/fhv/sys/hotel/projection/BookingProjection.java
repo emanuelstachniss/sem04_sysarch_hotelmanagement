@@ -1,5 +1,6 @@
 package at.fhv.sys.hotel.projection;
 
+import at.fhv.sys.hotel.commands.shared.events.BookingCancelled;
 import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
 import at.fhv.sys.hotel.commands.shared.events.RoomBooked;
 import at.fhv.sys.hotel.models.BookingQueryModel;
@@ -28,5 +29,10 @@ public class BookingProjection {
         Logger.getAnonymousLogger().info("Processing event: " + roomBooked);
 
         bookingService.createBooking(new BookingQueryModel(roomBooked.getBookingId(), roomBooked.getCustomerId(), roomBooked.getRoomNumber(), roomBooked.getStartTime(), roomBooked.getEndTime()));
+    }
+
+    public void processBookingCancelledEvent(BookingCancelled event) {
+        Logger.getAnonymousLogger().info("Processing cancellation: " + event.bookingId());
+        bookingService.deleteBooking(event.bookingId());
     }
 }
