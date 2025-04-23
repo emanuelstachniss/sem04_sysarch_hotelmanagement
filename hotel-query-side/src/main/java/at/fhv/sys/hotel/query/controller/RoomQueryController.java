@@ -2,16 +2,20 @@ package at.fhv.sys.hotel.query.controller;
 
 import at.fhv.sys.hotel.commands.shared.events.RoomCreated;
 import at.fhv.sys.hotel.dto.RoomDTO;
+import at.fhv.sys.hotel.models.BookingQueryModel;
 import at.fhv.sys.hotel.models.RoomQueryModel;
 import at.fhv.sys.hotel.projection.RoomProjection;
+import at.fhv.sys.hotel.service.BookingService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.jboss.logmanager.Logger;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Path("/api")
 @Produces(MediaType.APPLICATION_JSON)
@@ -20,6 +24,9 @@ public class RoomQueryController {
 
     @Inject
     RoomProjection roomProjection;
+
+    @Inject
+    BookingService bookingService;
 
     public RoomQueryController() {
     }
@@ -36,6 +43,22 @@ public class RoomQueryController {
 
         return roomsDTO;
     }
+
+    @GET
+    @Path("/getFreeRooms")
+    public List<RoomDTO> getFreeRooms(@QueryParam("startDate") LocalDate startDate,
+                                      @QueryParam("endDate") LocalDate endDate,
+                                      @QueryParam("numberOfPersons") int numberOfPersons) {
+        List<BookingQueryModel> bookings = bookingService.getBookings(startDate, endDate);
+        List<RoomQueryModel> freeRooms = roomProjection.getFreeRooms(startDate, endDate, numberOfPersons, bookings);
+
+        return freeRooms.stream()
+                .map(RoomQueryModel::toDTO)
+                .collect(Collectors.toList());
+    }
+
+
+
 
     @POST
     @Path("/roomCreated")

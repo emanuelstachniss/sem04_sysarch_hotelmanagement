@@ -38,6 +38,22 @@ public class BookingQueryModel {
         return customerId;
     }
 
+    public UUID getBookingId() {
+        return bookingId;
+    }
+
+    public int getRoomNumber() {
+        return roomNumber;
+    }
+
+    public LocalDate getBookingStartDate() {
+        return bookingStartDate;
+    }
+
+    public LocalDate getBookingEndDate() {
+        return bookingEndDate;
+    }
+
     public BookingDTO toDTO(CustomerDTO customerDTO) {
         return new BookingDTO(bookingId, customerDTO, this.roomNumber, this.bookingStartDate, this.bookingEndDate);
     }
