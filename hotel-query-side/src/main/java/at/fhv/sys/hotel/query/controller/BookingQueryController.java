@@ -1,5 +1,7 @@
 package at.fhv.sys.hotel.query.controller;
 
+import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
+import at.fhv.sys.hotel.commands.shared.events.RoomBooked;
 import at.fhv.sys.hotel.dto.BookingDTO;
 import at.fhv.sys.hotel.dto.CustomerDTO;
 import at.fhv.sys.hotel.models.BookingQueryModel;
@@ -10,6 +12,8 @@ import at.fhv.sys.hotel.service.CustomerService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import org.jboss.logmanager.Logger;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -25,6 +29,8 @@ public class BookingQueryController {
 
     @Inject
     CustomerService customerService;
+    @Inject
+    BookingProjection bookingProjection;
 
 
     public BookingQueryController() {}
@@ -42,6 +48,14 @@ public class BookingQueryController {
         }
 
         return bookingDTOs;
+    }
+
+    @POST
+    @Path("/roomBooked")
+    public Response roomBooked(RoomBooked event) {
+        Logger.getAnonymousLogger().info("Received event: " + event);
+        bookingProjection.processRoomBookedEvent(event);
+        return Response.ok(event).build();
     }
 }
 

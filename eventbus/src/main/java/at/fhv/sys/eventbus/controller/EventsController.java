@@ -26,7 +26,7 @@ public class EventsController {
 
     @POST
     @Path("/roomBooked")
-    public Response customerCreated(RoomBooked event) {
+    public Response roomBooked(RoomBooked event) {
         Logger.getAnonymousLogger().info("Received event: " + event);
         eventStoreService.processEvent("room-" + event.getRoomNumber() , event);
         return Response.ok(event).build();
