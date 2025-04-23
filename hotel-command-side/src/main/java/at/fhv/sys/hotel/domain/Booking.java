@@ -1,19 +1,26 @@
 package at.fhv.sys.hotel.domain;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class Booking {
 
+    private UUID bookingId;
     private Customer customer;
     private Room room;
     private LocalDate bookingStartDate;
     private LocalDate bookingEndDate;
 
     public Booking(Builder builder) {
+        this.bookingId = builder.bookingId;
         this.customer = builder.customer;
         this.room = builder.room;
         this.bookingStartDate = builder.bookingStartDate;
         this.bookingEndDate = builder.bookingEndDate;
+    }
+
+    public UUID getBookingId() {
+        return bookingId;
     }
 
     public Customer getCustomer() {
@@ -37,10 +44,16 @@ public class Booking {
     }
 
     public static class Builder {
+        private UUID bookingId = UUID.randomUUID();
         private Customer customer;
         private Room room;
         private LocalDate bookingStartDate;
         private LocalDate bookingEndDate;
+
+        public Builder bookingId(UUID bookingId) {
+            this.bookingId = bookingId;
+            return this;
+        }
 
         public Booking.Builder customer(Customer customer) {
             this.customer = customer;

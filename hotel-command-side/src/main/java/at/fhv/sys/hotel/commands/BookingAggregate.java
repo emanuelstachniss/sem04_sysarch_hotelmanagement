@@ -49,6 +49,7 @@ public class BookingAggregate {
             bookingRepository.save(booking);
 
             RoomBooked event = new RoomBooked(
+                    booking.getBookingId(),
                     booking.getCustomer().getCustomerId(),
                     booking.getBookingStartDate(),
                     booking.getBookingEndDate(),

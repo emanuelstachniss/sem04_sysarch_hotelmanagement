@@ -1,8 +1,6 @@
 package at.fhv.sys.hotel.service;
 
 import at.fhv.sys.hotel.models.BookingQueryModel;
-import at.fhv.sys.hotel.models.CustomerQueryModel;
-import at.fhv.sys.hotel.projection.BookingProjection;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

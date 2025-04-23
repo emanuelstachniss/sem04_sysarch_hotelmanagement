@@ -27,6 +27,6 @@ public class BookingProjection {
     public void processRoomBookedEvent(RoomBooked roomBooked) {
         Logger.getAnonymousLogger().info("Processing event: " + roomBooked);
 
-        bookingService.createBooking(new BookingQueryModel(roomBooked.getCustomerId(), roomBooked.getRoomNumber(), roomBooked.getStartTime(), roomBooked.getEndTime()));
+        bookingService.createBooking(new BookingQueryModel(roomBooked.getBookingId(), roomBooked.getCustomerId(), roomBooked.getRoomNumber(), roomBooked.getStartTime(), roomBooked.getEndTime()));
     }
 }
