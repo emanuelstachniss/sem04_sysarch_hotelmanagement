@@ -6,6 +6,7 @@ import at.fhv.sys.hotel.commands.shared.events.BookingCancelled;
 import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
 import at.fhv.sys.hotel.commands.shared.events.RoomBooked;
 import at.fhv.sys.hotel.commands.shared.events.RoomCreated;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
@@ -23,34 +24,38 @@ public class EventProcessingService {
     @Inject
     EventServicePanache eventServicePanache;
 
+    @Inject
+    ObjectMapper objectMapper; // Jackson ObjectMapper wird hier injiziert
+
     public void processEvent(String stream, Object eventObject) {
-        EventEntity eventEntity = new EventEntity();
-        eventEntity.setStream(stream);
-        eventEntity.setPayload(eventObject.toString());
-        eventEntity.setTimestamp(LocalDateTime.now());
-        eventEntity.setType(eventObject.getClass().getSimpleName());
+        try {
+            EventEntity eventEntity = new EventEntity();
+            eventEntity.setStream(stream);
+            String jsonPayload = objectMapper.writeValueAsString(eventObject);
+            eventEntity.setPayload(jsonPayload);
+            eventEntity.setTimestamp(LocalDateTime.now());
+            eventEntity.setType(eventObject.getClass().getSimpleName());
 
-        eventServicePanache.createEvent(eventEntity);
+            eventServicePanache.createEvent(eventEntity);
 
-        //queryClient.forwardCustomerCreatedEvent((CustomerCreated) eventObject);
-
-        if (eventObject instanceof CustomerCreated) {
-            queryClient.forwardCustomerCreatedEvent((CustomerCreated) eventObject);
-        } else if (eventObject instanceof RoomBooked) {
-            queryClient.forwardRoomBookedEvent((RoomBooked) eventObject);
-        } else if (eventObject instanceof RoomCreated) {
-            queryClient.forwardRoomCreatedEvent((RoomCreated) eventObject);
-        } else if (eventObject instanceof BookingCancelled) {
-            queryClient.forwardBookingCancelledEvent((BookingCancelled) eventObject);
-        }
-        else {
-            System.out.println("Unsupported event type: " + eventObject.getClass().getName());
+            if (eventObject instanceof CustomerCreated) {
+                queryClient.forwardCustomerCreatedEvent((CustomerCreated) eventObject);
+            } else if (eventObject instanceof RoomBooked) {
+                queryClient.forwardRoomBookedEvent((RoomBooked) eventObject);
+            } else if (eventObject instanceof RoomCreated) {
+                queryClient.forwardRoomCreatedEvent((RoomCreated) eventObject);
+            } else if (eventObject instanceof BookingCancelled) {
+                queryClient.forwardBookingCancelledEvent((BookingCancelled) eventObject);
+            } else {
+                System.out.println("Unsupported event type: " + eventObject.getClass().getName());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Error processing event: " + e.getMessage());
         }
     }
 
     public List<EventEntity> getAllEvents() {
         return eventServicePanache.getAllEvents();
     }
-
-
 }

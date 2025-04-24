@@ -23,6 +23,8 @@ dependencies {
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
     implementation project(':share-events')
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.5' // oder die neueste Version
+
 }
 
 group 'at.fhv.sys'
