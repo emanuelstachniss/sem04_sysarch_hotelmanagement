@@ -14,23 +14,23 @@ import java.util.UUID;
 @Consumes(MediaType.APPLICATION_JSON)
 public class BookingCommandController {
 
-    private final BookingAggregate roomAggregate;
+    BookingAggregate bookingAggregate;
 
     @jakarta.inject.Inject
     public BookingCommandController(BookingAggregate roomAggregate) {
-        this.roomAggregate = roomAggregate;
+        this.bookingAggregate = roomAggregate;
     }
 
     @POST
     @Path("/bookRoom")
     public String bookRoom(@QueryParam("startTime") String startTime, @QueryParam("endTime") String endTime, @QueryParam("roomNumber") int roomNumber, @QueryParam("capacity") int capacity, @QueryParam("lastname") String lastname, @QueryParam("firstname") String firstname) {
-        return roomAggregate.handle(new BookRoomCommand(startTime, endTime, roomNumber, capacity, lastname, firstname));
+        return bookingAggregate.handle(new BookRoomCommand(startTime, endTime, roomNumber, capacity, lastname, firstname));
     }
 
     @DELETE
     @Path("/cancelBooking")
     public String cancelBooking(@QueryParam("bookingId") UUID bookingId) {
-        return roomAggregate.cancel(new CancelBookingCommand(bookingId));
+        return bookingAggregate.cancel(new CancelBookingCommand(bookingId));
     }
 
 }

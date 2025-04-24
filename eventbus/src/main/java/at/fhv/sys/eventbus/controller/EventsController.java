@@ -39,4 +39,12 @@ public class EventsController {
         eventStoreService.processEvent("room-" + event.getRoomNumber() , event);
         return Response.ok(event).build();
     }
+
+    @POST
+    @Path("/bookingCancelled")
+    public Response bookingCancelled(BookingCancelled event) {
+        Logger.getAnonymousLogger().info("Received event: " + event);
+        eventStoreService.processEvent("booking-" + event.bookingId() , event);
+        return Response.ok(event).build();
+    }
 }
