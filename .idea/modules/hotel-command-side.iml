@@ -6,6 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/../../hotel-command-side/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../hotel-command-side/build" />
     </content>
+    <content url="file://$MODULE_DIR$/../../hotel-command-side">
+      <excludeFolder url="file://$MODULE_DIR$/../../hotel-command-side/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../hotel-command-side/build" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

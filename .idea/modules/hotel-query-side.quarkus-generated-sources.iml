@@ -4,6 +4,7 @@
     <output url="file://$MODULE_DIR$/../../hotel-query-side/build/classes/java/quarkus-generated-sources" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../hotel-query-side/src/quarkus-generated-sources" />
+    <content url="file://$MODULE_DIR$/../../hotel-query-side/src/quarkus-generated-sources" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -4,6 +4,7 @@
     <output url="file://$MODULE_DIR$/../../hotel-command-side/build/classes/java/native-test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../hotel-command-side/src/native-test" />
+    <content url="file://$MODULE_DIR$/../../hotel-command-side/src/native-test" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: io.quarkus:quarkus-rest:3.19.3" level="project" />

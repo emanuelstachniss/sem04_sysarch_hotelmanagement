@@ -4,6 +4,7 @@
     <output url="file://$MODULE_DIR$/../../hotel-command-side/build/classes/java/integrationTest" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../hotel-command-side/src/integrationTest" />
+    <content url="file://$MODULE_DIR$/../../hotel-command-side/src/integrationTest" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: io.quarkus:quarkus-rest:3.19.3" level="project" />

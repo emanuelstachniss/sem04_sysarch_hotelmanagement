@@ -3,6 +3,8 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../share-events" />
+    <content url="file://$MODULE_DIR$/../../../share-events" />
+    <content url="file://$MODULE_DIR$/../../../share-events" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

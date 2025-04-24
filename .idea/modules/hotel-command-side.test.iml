@@ -6,6 +6,10 @@
     <content url="file://$MODULE_DIR$/../../hotel-command-side/build/classes/java/quarkus-test-generated-sources">
       <sourceFolder url="file://$MODULE_DIR$/../../hotel-command-side/build/classes/java/quarkus-test-generated-sources" isTestSource="true" />
     </content>
+    <content url="file://$MODULE_DIR$/../../hotel-command-side/build/classes/java/quarkus-test-generated-sources">
+      <sourceFolder url="file://$MODULE_DIR$/../../hotel-command-side/build/classes/java/quarkus-test-generated-sources" isTestSource="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../hotel-command-side/src/test" />
     <content url="file://$MODULE_DIR$/../../hotel-command-side/src/test" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

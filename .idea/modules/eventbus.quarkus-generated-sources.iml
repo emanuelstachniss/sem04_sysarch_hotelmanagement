@@ -4,6 +4,7 @@
     <output url="file://$MODULE_DIR$/../../eventbus/build/classes/java/quarkus-generated-sources" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../eventbus/src/quarkus-generated-sources" />
+    <content url="file://$MODULE_DIR$/../../eventbus/src/quarkus-generated-sources" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
