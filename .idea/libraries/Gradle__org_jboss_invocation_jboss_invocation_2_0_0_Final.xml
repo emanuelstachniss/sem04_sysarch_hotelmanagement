@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jboss.invocation:jboss-invocation:2.0.0.Final" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.jboss.invocation" artifactId="jboss-invocation" version="2.0.0.Final" baseVersion="2.0.0.Final" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.invocation/jboss-invocation/2.0.0.Final/a23df3678b4797bffaecff4be013fd9971d0f3a2/jboss-invocation-2.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

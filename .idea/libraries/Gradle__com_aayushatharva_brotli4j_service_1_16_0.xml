@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.aayushatharva.brotli4j:service:1.16.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.aayushatharva.brotli4j" artifactId="service" version="1.16.0" baseVersion="1.16.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.aayushatharva.brotli4j/service/1.16.0/bd45e3f5a7165e190ea759abf220ce87d5f59103/service-1.16.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

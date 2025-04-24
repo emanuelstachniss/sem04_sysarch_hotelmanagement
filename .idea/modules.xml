@@ -2,7 +2,40 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eventbus.iml" filepath="$PROJECT_DIR$/.idea/modules/eventbus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eventbus.integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/eventbus.integrationTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eventbus.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eventbus.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eventbus.native-test.iml" filepath="$PROJECT_DIR$/.idea/modules/eventbus.native-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eventbus.quarkus-generated-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/eventbus.quarkus-generated-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eventbus.quarkus-test-generated-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/eventbus.quarkus-test-generated-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/eventbus.share-events.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/eventbus.share-events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/eventbus.share-events.main.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/eventbus.share-events.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/eventbus.share-events.test.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/eventbus.share-events.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eventbus.test.iml" filepath="$PROJECT_DIR$/.idea/modules/eventbus.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-command-side.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-command-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-command-side.integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-command-side.integrationTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-command-side.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-command-side.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-command-side.native-test.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-command-side.native-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-command-side.quarkus-generated-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-command-side.quarkus-generated-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-command-side.quarkus-test-generated-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-command-side.quarkus-test-generated-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/hotel-command-side.share-events.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/hotel-command-side.share-events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/hotel-command-side.share-events.main.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/hotel-command-side.share-events.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/hotel-command-side.share-events.test.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/hotel-command-side.share-events.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-command-side.test.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-command-side.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-query-side.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-query-side.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-query-side.integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-query-side.integrationTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-query-side.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-query-side.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-query-side.native-test.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-query-side.native-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-query-side.quarkus-generated-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-query-side.quarkus-generated-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-query-side.quarkus-test-generated-sources.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-query-side.quarkus-test-generated-sources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/hotel-query-side.share-events.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/hotel-query-side.share-events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/hotel-query-side.share-events.main.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/hotel-query-side.share-events.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/59273921/hotel-query-side.share-events.test.iml" filepath="$PROJECT_DIR$/.idea/modules/59273921/hotel-query-side.share-events.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hotel-query-side.test.iml" filepath="$PROJECT_DIR$/.idea/modules/hotel-query-side.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sem04_sysarch_hotelmanagement.iml" filepath="$PROJECT_DIR$/.idea/sem04_sysarch_hotelmanagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/share-events.iml" filepath="$PROJECT_DIR$/.idea/modules/share-events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/share-events.main.iml" filepath="$PROJECT_DIR$/.idea/modules/share-events.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/share-events.test.iml" filepath="$PROJECT_DIR$/.idea/modules/share-events.test.iml" />
     </modules>
   </component>
 </project>

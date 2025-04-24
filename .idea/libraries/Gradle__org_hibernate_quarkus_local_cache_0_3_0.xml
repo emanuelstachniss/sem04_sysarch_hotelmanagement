@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.hibernate:quarkus-local-cache:0.3.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.hibernate" artifactId="quarkus-local-cache" version="0.3.0" baseVersion="0.3.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/quarkus-local-cache/0.3.0/57273e58d2c61685856dde6c12fba390dce51c72/quarkus-local-cache-0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.quarkus.resteasy.reactive:resteasy-reactive-common-types:3.19.3" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.quarkus.resteasy.reactive" artifactId="resteasy-reactive-common-types" version="3.19.3" baseVersion="3.19.3" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus.resteasy.reactive/resteasy-reactive-common-types/3.19.3/716227b1c178d4c26618a18e1c4b951961a937dd/resteasy-reactive-common-types-3.19.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.agroal:agroal-api:2.5" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.agroal" artifactId="agroal-api" version="2.5" baseVersion="2.5" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.agroal/agroal-api/2.5/89e17544ac6c10f22af5d29c34efefb7f66108a2/agroal-api-2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

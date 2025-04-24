@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="eventbus" target="17" />
+      <module name="eventbus.integrationTest" target="17" />
+      <module name="eventbus.main" target="17" />
+      <module name="eventbus.native-test" target="17" />
+      <module name="eventbus.quarkus-generated-sources" target="17" />
+      <module name="eventbus.quarkus-test-generated-sources" target="17" />
+      <module name="eventbus.share-events" target="17" />
+      <module name="eventbus.share-events.main" target="17" />
+      <module name="eventbus.share-events.test" target="17" />
+      <module name="eventbus.test" target="17" />
+      <module name="hotel-command-side" target="17" />
+      <module name="hotel-command-side.integrationTest" target="17" />
+      <module name="hotel-command-side.main" target="17" />
+      <module name="hotel-command-side.native-test" target="17" />
+      <module name="hotel-command-side.quarkus-generated-sources" target="17" />
+      <module name="hotel-command-side.quarkus-test-generated-sources" target="17" />
+      <module name="hotel-command-side.share-events" target="17" />
+      <module name="hotel-command-side.share-events.main" target="17" />
+      <module name="hotel-command-side.share-events.test" target="17" />
+      <module name="hotel-command-side.test" target="17" />
+      <module name="hotel-query-side" target="17" />
+      <module name="hotel-query-side.integrationTest" target="17" />
+      <module name="hotel-query-side.main" target="17" />
+      <module name="hotel-query-side.native-test" target="17" />
+      <module name="hotel-query-side.quarkus-generated-sources" target="17" />
+      <module name="hotel-query-side.quarkus-test-generated-sources" target="17" />
+      <module name="hotel-query-side.share-events" target="17" />
+      <module name="hotel-query-side.share-events.main" target="17" />
+      <module name="hotel-query-side.share-events.test" target="17" />
+      <module name="hotel-query-side.test" target="17" />
+      <module name="share-events" target="17" />
+      <module name="share-events.main" target="17" />
+      <module name="share-events.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eventbus.main" options="-parameters" />

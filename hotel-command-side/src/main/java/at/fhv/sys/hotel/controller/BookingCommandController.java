@@ -6,7 +6,6 @@ import at.fhv.sys.hotel.commands.CancelBookingCommand;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 @Path("/api")
@@ -16,7 +15,6 @@ public class BookingCommandController {
 
     BookingAggregate bookingAggregate;
 
-    @jakarta.inject.Inject
     public BookingCommandController(BookingAggregate roomAggregate) {
         this.bookingAggregate = roomAggregate;
     }

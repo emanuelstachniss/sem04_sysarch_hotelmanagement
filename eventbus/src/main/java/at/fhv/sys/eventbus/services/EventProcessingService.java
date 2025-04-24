@@ -2,10 +2,7 @@ package at.fhv.sys.eventbus.services;
 
 import at.fhv.sys.eventbus.client.QueryClient;
 import at.fhv.sys.eventbus.domain.EventEntity;
-import at.fhv.sys.hotel.commands.shared.events.BookingCancelled;
-import at.fhv.sys.hotel.commands.shared.events.CustomerCreated;
-import at.fhv.sys.hotel.commands.shared.events.RoomBooked;
-import at.fhv.sys.hotel.commands.shared.events.RoomCreated;
+import at.fhv.sys.hotel.commands.shared.events.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -46,6 +43,8 @@ public class EventProcessingService {
                 queryClient.forwardRoomCreatedEvent((RoomCreated) eventObject);
             } else if (eventObject instanceof BookingCancelled) {
                 queryClient.forwardBookingCancelledEvent((BookingCancelled) eventObject);
+            } else if (eventObject instanceof BookingPaid) {
+                queryClient.forwardBookingPaidEvent((BookingPaid) eventObject);
             } else {
                 System.out.println("Unsupported event type: " + eventObject.getClass().getName());
             }

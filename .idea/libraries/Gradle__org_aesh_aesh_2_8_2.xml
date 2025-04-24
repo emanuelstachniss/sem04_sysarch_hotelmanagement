@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.aesh:aesh:2.8.2" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.aesh" artifactId="aesh" version="2.8.2" baseVersion="2.8.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.aesh/aesh/2.8.2/b3da34498cb59529b5e39e4092dc435d1da9d83f/aesh-2.8.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.graalvm.sdk:nativeimage:23.1.2" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.graalvm.sdk" artifactId="nativeimage" version="23.1.2" baseVersion="23.1.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.sdk/nativeimage/23.1.2/f5e116ec7e2f59c6975229aa762b7a07598e77a0/nativeimage-23.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

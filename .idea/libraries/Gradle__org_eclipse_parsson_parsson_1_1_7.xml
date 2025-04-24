@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.parsson:parsson:1.1.7" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.eclipse.parsson" artifactId="parsson" version="1.1.7" baseVersion="1.1.7" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.parsson/parsson/1.1.7/f5825abecd373006262dd319d7df8c5cdbd140ca/parsson-1.1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

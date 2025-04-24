@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.aesh:readline:2.6" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.aesh" artifactId="readline" version="2.6" baseVersion="2.6" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.aesh/readline/2.6/c34fc8145017c4dd5967dc4053d5b100631e6f3c/readline-2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

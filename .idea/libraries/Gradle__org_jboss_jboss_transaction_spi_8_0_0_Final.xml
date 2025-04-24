@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jboss:jboss-transaction-spi:8.0.0.Final" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.jboss" artifactId="jboss-transaction-spi" version="8.0.0.Final" baseVersion="8.0.0.Final" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss/jboss-transaction-spi/8.0.0.Final/c9ac775a105f4f7326c3b3052aee9c5ab1b29403/jboss-transaction-spi-8.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

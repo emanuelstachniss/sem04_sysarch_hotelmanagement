@@ -2,6 +2,7 @@ package at.fhv.sys.hotel.controller;
 
 import at.fhv.sys.hotel.commands.CreateCustomerCommand;
 import at.fhv.sys.hotel.commands.CustomerAggregate;
+import at.fhv.sys.hotel.commands.UpdateCustomerCommand;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
@@ -25,9 +26,8 @@ public class CustomerCommandController {
     }
 
     @POST
-    @Path("/{customerId}/update")
-    public String updateCustomer(@PathParam("customerId") String customerId, @QueryParam("email") String email) {
-        // TBD: process customer
-        return "Customer updated";
+    @Path("/updateCustomer")
+    public String updateCustomer(@QueryParam("firstName") String firstName, @QueryParam("lastName") String lastName, @QueryParam("newFirstName") String newFirstName, @QueryParam("newLastName") String newLastName, @QueryParam("newAddress") String newAddress, @QueryParam("newBirthday") LocalDate newBirthday) {
+        return customerAggregate.update(new UpdateCustomerCommand(firstName, lastName, newFirstName, newLastName, newAddress, newBirthday));
     }
 }

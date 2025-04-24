@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jboss.slf4j:slf4j-jboss-logmanager:2.0.0.Final" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.jboss.slf4j" artifactId="slf4j-jboss-logmanager" version="2.0.0.Final" baseVersion="2.0.0.Final" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.slf4j/slf4j-jboss-logmanager/2.0.0.Final/accb024e15025215cb5ef8c8f41ce5b684fddbf0/slf4j-jboss-logmanager-2.0.0.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

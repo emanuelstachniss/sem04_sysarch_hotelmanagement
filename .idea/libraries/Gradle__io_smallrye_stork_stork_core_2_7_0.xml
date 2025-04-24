@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.smallrye.stork:stork-core:2.7.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.smallrye.stork" artifactId="stork-core" version="2.7.0" baseVersion="2.7.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.stork/stork-core/2.7.0/fc54799b6757f8f2f2e96e92eb3f8590b5870b64/stork-core-2.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
