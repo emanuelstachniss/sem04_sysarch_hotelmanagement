@@ -11,6 +11,7 @@ import jakarta.inject.Inject;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @ApplicationScoped
 public class EventProcessingService {
@@ -46,4 +47,10 @@ public class EventProcessingService {
             System.out.println("Unsupported event type: " + eventObject.getClass().getName());
         }
     }
+
+    public List<EventEntity> getAllEvents() {
+        return eventServicePanache.getAllEvents();
+    }
+
+
 }

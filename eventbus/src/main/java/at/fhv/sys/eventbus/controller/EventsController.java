@@ -1,5 +1,6 @@
 package at.fhv.sys.eventbus.controller;
 
+import at.fhv.sys.eventbus.domain.EventEntity;
 import at.fhv.sys.eventbus.services.EventProcessingService;
 import at.fhv.sys.hotel.commands.shared.events.*;
 import jakarta.inject.Inject;
@@ -7,6 +8,8 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.jboss.logmanager.Logger;
+
+import java.util.List;
 
 @Path("/api")
 @Produces(MediaType.APPLICATION_JSON)
@@ -47,4 +50,11 @@ public class EventsController {
         eventStoreService.processEvent("booking-" + event.bookingId() , event);
         return Response.ok(event).build();
     }
+
+    @GET
+    @Path("/getAllEvents")
+    public List<EventEntity> getAllEvents() {
+        return eventStoreService.getAllEvents();
+    }
+
 }

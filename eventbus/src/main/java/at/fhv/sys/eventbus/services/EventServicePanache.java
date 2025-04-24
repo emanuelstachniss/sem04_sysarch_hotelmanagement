@@ -4,6 +4,8 @@ import at.fhv.sys.eventbus.domain.EventEntity;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.transaction.Transactional;
 
+import java.util.List;
+
 @ApplicationScoped
 public class EventServicePanache {
 
@@ -11,4 +13,10 @@ public class EventServicePanache {
     public void createEvent(EventEntity eventEntity) {
         eventEntity.persist();
     }
+
+    @Transactional
+    public List<EventEntity> getAllEvents() {
+        return EventEntity.listAll();
+    }
+
 }

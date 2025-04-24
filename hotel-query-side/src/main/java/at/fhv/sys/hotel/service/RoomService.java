@@ -28,12 +28,10 @@ public class RoomService {
     public List<RoomQueryModel> getFreeRooms(LocalDate startDate, LocalDate endDate, int numberOfPersons, List<BookingQueryModel> bookings) {
         List<RoomQueryModel> allRooms = getAllRooms();
 
-        // Nur Räume mit ausreichender Kapazität
         List<RoomQueryModel> suitableRooms = allRooms.stream()
                 .filter(room -> room.getCapacity() >= numberOfPersons)
                 .collect(Collectors.toList());
 
-        // Finde Raum-IDs, die im Zeitraum belegt sind (korrekte Überlappung: bookingStart < endDate && bookingEnd > startDate)
         List<UUID> bookedRoomIds = bookings.stream()
                 .filter(b -> b.getBookingStartDate().isBefore(endDate) && b.getBookingEndDate().isAfter(startDate))
                 .map(BookingQueryModel::getRoomNumber)
@@ -45,7 +43,6 @@ public class RoomService {
                 .filter(id -> id != null)
                 .collect(Collectors.toList());
 
-        // Räume zurückgeben, die NICHT gebucht sind
         return suitableRooms.stream()
                 .filter(room -> !bookedRoomIds.contains(room.getRoomId()))
                 .collect(Collectors.toList());

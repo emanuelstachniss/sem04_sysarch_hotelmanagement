@@ -32,4 +32,24 @@ public class EventEntity extends PanacheEntityBase {
     public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
     }
+
+    public Long getEventId() {
+        return eventId;
+    }
+
+    public String getStream() {
+        return stream;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getPayload() {
+        return payload;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
 }
