@@ -40,10 +40,6 @@ public class RoomRepository {
         rooms.add(room);
     }
 
-    public List<Room> findAll() {
-        return new ArrayList<>(rooms);
-    }
-
     public Room findByRoomNumber(int roomNumber) {
         return rooms.stream()
                 .filter(r -> r.getRoomNumber() == roomNumber)

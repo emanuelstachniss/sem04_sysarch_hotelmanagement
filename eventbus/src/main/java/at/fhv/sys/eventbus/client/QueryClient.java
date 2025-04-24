@@ -29,4 +29,9 @@ public interface QueryClient {
     @Consumes(MediaType.APPLICATION_JSON)
     void forwardRoomCreatedEvent(RoomCreated event);
 
+    @POST
+    @Path("/bookingPaid")
+    @Consumes(MediaType.APPLICATION_JSON)
+    void forwardBookingPaidEvent(BookingPaid event);
+
    }

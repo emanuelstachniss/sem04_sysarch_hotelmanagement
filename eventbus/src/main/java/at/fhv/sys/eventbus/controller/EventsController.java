@@ -47,4 +47,12 @@ public class EventsController {
         eventStoreService.processEvent("room-" + event.getRoomNumber() , event);
         return Response.ok(event).build();
     }
+
+    @POST
+    @Path("/bookingPaid")
+    public Response bookingPaid(BookingPaid event) {
+        Logger.getAnonymousLogger().info("Received event: " + event);
+        eventStoreService.processEvent("booking-" + event.getBookingId(), event);
+        return Response.ok(event).build();
+    }
 }

@@ -22,8 +22,4 @@ public class CustomerRepository {
                 .findFirst()
                 .orElse(null);
     }
-
-    public List<Customer> findAll() {
-        return new ArrayList<>(customers);
-    }
 }

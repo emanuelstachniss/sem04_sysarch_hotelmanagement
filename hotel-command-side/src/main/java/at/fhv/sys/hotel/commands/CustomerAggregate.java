@@ -39,6 +39,7 @@ public class CustomerAggregate {
 
         } catch (IllegalArgumentException e) {
             Logger.getAnonymousLogger().info(e.getMessage());
+            return "Customer creation failed: " + e.getMessage();
         }
         return "Customer created";
     }
@@ -50,7 +51,6 @@ public class CustomerAggregate {
             if (existingCustomer == null) {
                 throw new NotFoundException("Customer not found");
             }
-            //TODO check if new input is not empty
 
             Customer updatedCustomer = Customer.from(existingCustomer)
                     .firstName(command.newFirstName())
@@ -67,8 +67,8 @@ public class CustomerAggregate {
 
         } catch (Exception e) {
             Logger.getAnonymousLogger().info(e.getMessage());
+            return "Customer update failed: " + e.getMessage();
         }
         return "Customer updated";
     }
-
 }

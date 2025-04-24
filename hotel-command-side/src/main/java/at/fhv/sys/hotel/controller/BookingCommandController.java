@@ -5,8 +5,6 @@ import at.fhv.sys.hotel.commands.BookingAggregate;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
-import java.time.LocalDate;
-
 @Path("/api")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -14,7 +12,6 @@ public class BookingCommandController {
 
     private final BookingAggregate roomAggregate;
 
-    @jakarta.inject.Inject
     public BookingCommandController(BookingAggregate roomAggregate) {
         this.roomAggregate = roomAggregate;
     }
